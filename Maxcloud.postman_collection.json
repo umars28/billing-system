@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "bd7bdd46-8e2a-4a6d-93fc-81b39e0d4b09",
+		"name": "Maxcloud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29799256"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@example.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password123",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "ikXpKdqArtBkJiLwgjByCbOqkv751qmaYClz5iATc5518887"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "http://127.0.0.1:8000/api/logout"
+			},
+			"response": []
+		},
+		{
+			"name": "List Vps Package",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "ikXpKdqArtBkJiLwgjByCbOqkv751qmaYClz5iATc5518887"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": "http://127.0.0.1:8000/api/vps-packages"
+			},
+			"response": []
+		},
+		{
+			"name": "List Vps Instance",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "RWBOMrkv8gORV8VvgUoLD7J2R7FBLPqeZWGX2Aeo0a036ffa"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "http://127.0.0.1:8000/api/vps"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Vps Instance",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "RWBOMrkv8gORV8VvgUoLD7J2R7FBLPqeZWGX2Aeo0a036ffa"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "package_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Standar",
+							"type": "text"
+						},
+						{
+							"key": "cpu",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "ram",
+							"value": "2048",
+							"type": "text"
+						},
+						{
+							"key": "storage",
+							"value": "100",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/vps"
+			},
+			"response": []
+		},
+		{
+			"name": "Top Up Wallet",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "RWBOMrkv8gORV8VvgUoLD7J2R7FBLPqeZWGX2Aeo0a036ffa"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "amount",
+							"value": "60000",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Top up",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/wallet/topup"
+			},
+			"response": []
+		}
+	]
+}
