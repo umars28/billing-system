@@ -139,7 +139,7 @@ Retrieve a list of VPS package
 - `Content-Type: application/json`
 - `Authorization: Bearer {access_token}`
 
-**Response Success Supervisor Example:**
+**Response Success Example:**
 ```json
 [
     {
@@ -225,7 +225,7 @@ Retrieve a list of VPS Instance
 - `Content-Type: application/json`
 - `Authorization: Bearer {access_token}`
 
-**Response Success Supervisor Example:**
+**Response Success Example:**
 ```json
 [
     {
